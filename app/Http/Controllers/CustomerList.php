@@ -9,6 +9,6 @@ class CustomerList extends Controller
 {
     public function getDanhSach(){
     	$customer = Customer::all();
-    	return view('admin.customer.danhsach');
+    	return view('admin.customer.danhsach',['custormer'=> $customer]);
     }
 }

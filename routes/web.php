@@ -16,14 +16,7 @@ Route::get('/', function () {
 });
 Route::group(['prefix'=>'khachhang'],function (){
 
-        //admin/theloai/sua
         Route::get('danhsach','CustomerList@getDanhSach');
 
-        Route::get('sua/{id}','CustomerList@getSua');
-        Route::post('sua/{id}','CustomerList@postSua');
 
-        Route::get('them','CustomerList@getThem');
-        Route::post('them','CustomerList@postThem');
-
-        Route::get('xoa/{id}','CustomerList@getXoa');
     });
