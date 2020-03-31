@@ -43,28 +43,26 @@
                                                 <tr>
                                                     <th data-field="state" data-checkbox="true"></th>
                                                     <th data-field="id">ID</th>
-                                                    <th data-field="name" data-editable="true">Tên</th>
-                                                    <th data-field="email" data-editable="true">Email</th>
-                                                    <th data-field="phone" data-editable="true">SĐT</th>
-                                                    <th data-field="company" data-editable="true">Địa chỉ</th>
+                                                    <th data-field="payment" data-editable="true">Payment</th>
+                                                    <th data-field="date" data-editable="true">Date</th>
+                                                    <th data-field="total" data-editable="true">Total</th>
                                                     <th data-field="complete">Note</th>
                                                     <th  data-field="sua">Xóa/Sửa</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            	@foreach ($customer as $ct)
+                                            	@foreach ($bill as $b)
                                                 <tr>
                                                     <td></td>
-                                                    <td>{{$ct->id}}</td>
-                                                    <td>{{$ct->name}}</td>
-                                                    <td>{{$ct->email}}</td>
-                                                    <td>{{$ct->phone_number}}</td>
-                                                    <td>{{$ct->address}}</td>
-                                                    <td >{{$ct->note}}</td>
+                                                    <td>{{$b->id}}</td>
+                                                    <td>{{$b->payment}}</td>
+                                                    <td>{{$b->date_order}}</td>
+                                                    <td>{{$b->total}}</td>
+                                                    <td >{{$b->note}}</td>
                                                     <td>
-                                                        <button class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/khachhang/xoa/{{$ct->id}}"> Delete</a></button>
-                                                          <button class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/khachhang/sua/{{$ct->id}}">Edit</a></button>
+                                                        <button class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/khachhang/xoa/{{$b->id}}"> Delete</a></button>
+                                                          <button class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/khachhang/sua/{{$b->id}}">Edit</a></button>
                                                     </td>
 
                                                 </tr>

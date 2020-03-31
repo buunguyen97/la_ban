@@ -65,7 +65,7 @@
     <div class="wrapper-pro">
         @include('admin.layout.menu')
         <div class="content-inner-all">
-            @include('admin.layout.search')
+            @include('admin.layout.headertop')
             <!-- Breadcome End-->
             <!-- Mobile Menu start -->
              @yield('content')

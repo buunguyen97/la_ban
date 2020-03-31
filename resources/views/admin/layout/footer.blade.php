@@ -1,4 +1,4 @@
-<div class="footer-copyright-area">
+<div class="footer-copyright-area" style="position: static;bottom: 0px;  width: 100%;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">

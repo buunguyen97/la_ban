@@ -11,11 +11,20 @@
                     <ul class="nav navbar-nav left-sidebar-menu-pro">
                         <li class="nav-item">
                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Trang Chủ</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+
+                        </li>
+                        <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-users"></i> <span class="mini-dn">Khách hàng</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                                <a href="dashboard.html" class="dropdown-item">Dashboard v.1</a>
-                                <a href="dashboard-2.html" class="dropdown-item">Dashboard v.2</a>
-                                <a href="analytics.html" class="dropdown-item">Analytics</a>
-                                <a href="widgets.html" class="dropdown-item">Widgets</a>
+                                <a href="admin/khachhang/danhsach" class="dropdown-item">Danh sách</a>
+                                <a href="admin/khachhang/them" class="dropdown-item">Thêm</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-credit-card "></i> <span class="mini-dn">Bills</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                            <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                                <a href="admin/bill/danhsach" class="dropdown-item">Danh sách</a>
+                                <a href="admin/bill/them" class="dropdown-item">Thêm</a>
+
                             </div>
                         </li>
                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-envelope"></i> <span class="mini-dn">Mailbox</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
@@ -73,21 +82,11 @@
                                 <a href="dual-list-box.html" class="dropdown-item">Dual List Box</a>
                             </div>
                         </li>
-                        <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-desktop"></i> <span class="mini-dn">App views</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
-                            <div role="menu" class="dropdown-menu left-menu-dropdown apps-left-menu-std animated flipInX">
-                                <a href="notifications.html" class="dropdown-item">Notifications</a>
-                                <a href="alerts.html" class="dropdown-item">Alerts</a>
-                                <a href="modals.html" class="dropdown-item">Modals</a>
-                                <a href="buttons.html" class="dropdown-item">Buttons</a>
-                                <a href="tabs.html" class="dropdown-item">Tabs</a>
-                                <a href="accordion.html" class="dropdown-item">Accordion</a>
-                                <a href="tab-menus.html" class="dropdown-item">Tab Menus</a>
-                            </div>
-                        </li>
+
                         <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-files-o"></i> <span class="mini-dn">Pages</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                             <div role="menu" class="dropdown-menu left-menu-dropdown pages-left-menu-std animated flipInX">
-                                <a href="login.html" class="dropdown-item">Login</a>
-                                <a href="register.html" class="dropdown-item">Register</a>
+                                <a href="login.html" class="dropdown-item">Danh sách</a>
+                                <a href="register.html" class="dropdown-item">Thêm</a>
                                 <a href="captcha.html" class="dropdown-item">Captcha</a>
                                 <a href="checkout.html" class="dropdown-item">Checkout</a>
                                 <a href="contact.html" class="dropdown-item">Contacts</a>
