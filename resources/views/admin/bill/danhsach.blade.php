@@ -61,8 +61,8 @@
                                                     <td>{{$b->total}}</td>
                                                     <td >{{$b->note}}</td>
                                                     <td>
-                                                        <button class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/khachhang/xoa/{{$b->id}}"> Delete</a></button>
-                                                          <button class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/khachhang/sua/{{$b->id}}">Edit</a></button>
+                                                        <button class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/bill/xoa/{{$b->id}}"> Delete</a></button>
+                                                        <button class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/bill/sua/{{$b->id}}">Edit</a></button>
                                                     </td>
 
                                                 </tr>

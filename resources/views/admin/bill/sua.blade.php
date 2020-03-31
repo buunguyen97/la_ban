@@ -22,7 +22,7 @@
                     <div class="sparkline12-list shadow-reset mg-t-30">
                         <div class="sparkline12-hd">
                             <div class="main-sparkline12-hd">
-                                <h1>Thêm Bill</h1>
+                                <h1>Sửa Bill</h1>
                                 <div class="sparkline12-outline-icon">
                                     <span class="sparkline12-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                     {{--                        <span><i class="fa fa-wrench"></i></span>--}}
@@ -43,7 +43,7 @@
                                                             <label class="login2 pull-right pull-right-pro">Payment</label>
                                                         </div>
                                                         <div class="col-lg-3">
-                                                            <input type="text" name="payment" class="form-control"/>
+                                                            <input type="text" name="payment" class="form-control" value="{{$bill->payment}}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -56,8 +56,8 @@
                                                         <div class="col-lg-9 col-md-6 col-sm-4 col-xs-6">
                                                             <div class="bt-df-checkbox pull-left">
                                                                 <select name="id_customer">
-                                                                    <option >Chọn người mua</option>
-                                                                   @foreach($bill as $b)
+                                                                    <option value="{{$bill->id_customer}}" >{{$bill->customer->name}}</option>
+                                                                   @foreach($billall as $b)
                                                                        <option value="{{$b->id_customer}}">{{$b->customer->name}}</option>
 
 
@@ -74,7 +74,7 @@
                                                                 class="login2 pull-right pull-right-pro">Date order</label>
                                                         </div>
                                                         <div class="col-lg-2">
-                                                            <input type="date" name="date" class="form-control"/>
+                                                            <input type="date" name="date" value="{{$bill->date_order}}" class="form-control"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -84,7 +84,7 @@
                                                             <label class="login2 pull-right pull-right-pro">Tổng tiền </label>
                                                         </div>
                                                         <div class="col-lg-3">
-                                                            <input type="number" name="total" class="form-control"/>
+                                                            <input type="number" name="total" value="{{$bill->total}}" class="form-control"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -96,7 +96,7 @@
                                                                 chú</label>
                                                         </div>
                                                         <div class="col-lg-3">
-                                                            <input type="text" class="form-control" name="note"
+                                                            <input type="text" class="form-control" name="note" value="{{$bill->note}}"
                                                                    />
                                                         </div>
                                                     </div>

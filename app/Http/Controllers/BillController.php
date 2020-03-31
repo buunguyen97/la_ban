@@ -38,6 +38,33 @@ class BillController extends Controller
     }
 
     public function getSua($id){
+        $bill = Bill::find($id);
+        $billall = Bill::all();
+        $customer = Customer::all();
+        return view('admin.bill.sua',compact('bill','customer','billall'));
+    }
 
+    public function postSua(Request $request,$id){
+        $bill = Bill::find($id);
+        $this->validate($request,
+            ['payment'=>'required|min:3|max:100'],
+            [
+                'payment.required'=>'Bạn chưa nhập payment',
+                'payment.min'=>'Ít nhất 3 kí tự',
+                'payment.max'=>'Độ dài quá dài,ít hơn 100 kí tự',
+            ]);
+        $bill->id_customer = $request->id_customer;
+        $bill->date_order = $request->date;
+        $bill->total = $request->total;
+        $bill->payment = $request->payment;
+        $bill->note = $request->note;
+        $bill->save();
+        return redirect('admin/bill/danhsach')->with('thongbao','Sửa thành công');
+    }
+
+    public function getXoa($id){
+        $bill = Bill::find($id);
+        $bill ->delete();
+        return redirect('admin/bill/danhsach')->with('thongbao','Xóa thành công');
     }
 }
