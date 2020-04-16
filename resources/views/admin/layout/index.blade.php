@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Dashboard v.1.0 | Adminpro - Admin Template</title>
     <meta name="description" content="">
-     <base href="{{asset('admin/')}}">
+     <base href="{{asset('')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->

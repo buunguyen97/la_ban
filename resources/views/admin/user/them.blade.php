@@ -22,7 +22,8 @@
                     <div class="sparkline12-list shadow-reset mg-t-30">
                         <div class="sparkline12-hd">
                             <div class="main-sparkline12-hd">
-                                <h1>Thêm Bill</h1>
+                                <h1>Thêm loại sản phẩm
+                                </h1>
                                 <div class="sparkline12-outline-icon">
                                     <span class="sparkline12-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                     {{--                        <span><i class="fa fa-wrench"></i></span>--}}
@@ -37,41 +38,27 @@
                                         <div class="all-form-element-inner">
                                             <form action="" method="post">
                                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+
                                                 <div class="form-group-inner">
                                                     <div class="row">
                                                         <div class="col-lg-3">
-                                                            <label class="login2 pull-right pull-right-pro">Payment</label>
+                                                            <label class="login2 pull-right pull-right-pro">Tên </label>
                                                         </div>
-                                                        <div class="col-lg-9 col-md-6 col-sm-4 col-xs-6">
-                                                            <div class="bt-df-checkbox pull-left">
-                                                                <select name="payment">
-                                                                    <option value="ATM">Thẻ ATM nội địa</option>
-                                                                    <option value="COD">Thanh toán khi nhận</option>
-                                                                    <option value="AIRPAY">Thanh toán Airpay</option>
-                                                                    <option value="Visa Card">Thẻ tín dụng</option>
-
-                                                                </select>
-                                                            </div>
+                                                        <div class="col-lg-3">
+                                                            <input type="text" name="name" class="form-control"/>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="form-group-inner">
                                                     <div class="row">
-                                                        <div class="col-lg-3 col-md-6 col-sm-8 col-xs-6">
-                                                            <label class="login2 pull-right pull-right-pro">Người mua
-                                                            </label>
+                                                        <div class="col-lg-3">
+                                                            <label
+                                                                class="login2 pull-right pull-right-pro">email</label>
                                                         </div>
-                                                        <div class="col-lg-9 col-md-6 col-sm-4 col-xs-6">
-                                                            <div class="bt-df-checkbox pull-left">
-                                                                <select name="id_customer">
-                                                                    <option >Chọn người mua</option>
-                                                                   @foreach($bill as $b)
-                                                                       <option value="{{$b->id_customer}}">{{$b->customer->name}}</option>
-
-
-                                                                    @endforeach
-                                                                </select>
-                                                            </div>
+                                                        <div class="col-lg-3">
+                                                            <input type="email" class="form-control" name="email"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -79,20 +66,34 @@
                                                     <div class="row">
                                                         <div class="col-lg-3">
                                                             <label
-                                                                class="login2 pull-right pull-right-pro">Date order</label>
+                                                                class="login2 pull-right pull-right-pro">Password</label>
                                                         </div>
-                                                        <div class="col-lg-2">
-                                                            <input type="date" name="date" class="form-control"/>
+                                                        <div class="col-lg-3">
+                                                            <input type="password" class="form-control"
+                                                                   name="password"/>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group-inner">
                                                     <div class="row">
                                                         <div class="col-lg-3">
-                                                            <label class="login2 pull-right pull-right-pro">Tổng tiền </label>
+                                                            <label class="login2 pull-right pull-right-pro">Nhập lại
+                                                                Password</label>
                                                         </div>
                                                         <div class="col-lg-3">
-                                                            <input type="number" name="total" class="form-control"/>
+                                                            <input type="password" class="form-control"
+                                                                   name="repassword"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group-inner">
+                                                    <div class="row">
+                                                        <div class="col-lg-3">
+                                                            <label
+                                                                class="login2 pull-right pull-right-pro">Address </label>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <input type="text" name="address" class="form-control"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -100,12 +101,26 @@
                                                 <div class="form-group-inner">
                                                     <div class="row">
                                                         <div class="col-lg-3">
-                                                            <label class="login2 pull-right pull-right-pro">Ghi
-                                                                chú</label>
+                                                            <label class="login2 pull-right pull-right-pro">Điện
+                                                                thoại </label>
                                                         </div>
                                                         <div class="col-lg-3">
-                                                            <input type="text" class="form-control" name="note"
-                                                                   />
+                                                            <input type="number" maxlength="12" name="phone"
+                                                                   class="form-control"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group-inner">
+                                                    <div class="row">
+                                                        <div class="col-lg-3">
+                                                            <label
+                                                                class="login2 pull-right pull-right-pro">Remember</label>
+                                                        </div>
+                                                        <div class="bt-df-checkbox pull-left">
+                                                            <select name="member">
+                                                                <option value="1">Admin</option>
+                                                                <option value="0">Member</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -115,7 +130,8 @@
                                                             <div class="col-lg-3"></div>
                                                             <div class="col-lg-3">
                                                                 <div class="login-horizental cancel-wp pull-left">
-                                                                    <button class="btn btn-white" type="reset">Cancel
+                                                                    <button class="btn btn-white" type="reset">
+                                                                        Cancel
                                                                     </button>
                                                                     <button
                                                                         class="btn btn-sm btn-primary login-submit-cs"

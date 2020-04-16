@@ -14,7 +14,7 @@
                 <div class="col-lg-6 col-md-1 col-sm-1 col-xs-12">
                     <div class="header-top-menu tabl-d-n">
                         <ul class="nav navbar-nav mai-top-nav">
-                            <li class="nav-item"><a href="#" class="nav-link">Home</a>
+                            <li class="nav-item"><a href="#" class="nav-link">Trang chủ</a>
                             </li>
                             <li class="nav-item"><a href="#" class="nav-link">About</a>
                             </li>
@@ -162,7 +162,7 @@
                             <li class="nav-item">
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                     <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                                    <span class="admin-name">Advanda Cro</span>
+                                    <span class="admin-name">{{$current_user->full_name}}</span>
                                     <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                 </a>
                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
@@ -170,11 +170,9 @@
                                     </li>
                                     <li><a href="#"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
                                     </li>
-                                    <li><a href="#"><span class="adminpro-icon adminpro-money author-log-ic"></span>User Billing</a>
+                                    <li><a href="#"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Cài đặt</a>
                                     </li>
-                                    <li><a href="#"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Settings</a>
-                                    </li>
-                                    <li><a href="#"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
+                                    <li><a href="admin/logout"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Thoát</a>
                                     </li>
                                 </ul>
                             </li>
